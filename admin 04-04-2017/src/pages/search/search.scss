@@ -1,0 +1,48 @@
+// page-search {
+//     .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+//         color:white;
+//     }
+//     .searchFilter{
+//   margin-top: 0.5em;
+//     margin-left: -0.1em;
+//     font-size: 1.9em;
+    
+// }
+ 
+// }
+// .searchbar-md{
+//     margin-top:10x;
+// }
+// page-search .searchFilter{
+//       margin-top:10x;
+// }
+ .ion-md-options:before{
+    font-size:2.2em;
+    color:#B22222;
+    margin-top: 10px;
+}
+.heart-button button{
+    background-color: white;
+}
+.heart-button .ion-md-heart-outline:before{
+    font-size:2.1em;
+    
+
+}
+.button-clicked [tappable]{
+    background: white;
+}
+.heart-button .ion-md-heart-outline:after{
+    color:#B22222;
+}
+
+.bookTitle {
+    font-family: "catamaran";
+    font-size: 16pt;
+    line-height: 3vh;
+}
+.bookAuthor {
+    font-family:  "roboto";
+    font-size: 12pt;
+    line-height: 3vh;
+}

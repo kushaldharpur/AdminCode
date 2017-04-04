@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar color="light">
+
+    <ion-segment>
+      <ion-segment-button value="Title">
+        Title
+      </ion-segment-button>
+      <ion-segment-button value="Author">
+        Author
+      </ion-segment-button>
+    </ion-segment>
+    <!--<ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>-->
+  </ion-toolbar>
+
+
+  <ion-row>
+    <ion-col width-90>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    </ion-col>
+    <ion-col width-10>
+      <ion-icon class="searchFilter" name="options" (click)=presentPopover($event)></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content>
+  <!--<ion-card class="detailViewPage">
+    <ion-row class="bookDiv">
+      <ion-col width-33>
+        <img class="img-thumbnail bookImg" src="./assets/images/9.png" alt="book Image">
+      </ion-col>
+      <ion-col width-67 class="rightAlign">
+
+        <span class="bookTitle">Title........</span><br>
+        <span class="bookAuthor">Author.............<br></span>
+
+      </ion-col>
+    </ion-row>
+
+
+
+  </ion-card>-->
+
+
+  <ion-card class="detailViewPage" *ngFor='let b of book' (click)="putIsbn(b.isbn)">
+<ion-list>
+    
+      <ion-item-sliding #item>
+
+        <ion-item>
+          <ion-row class="bookDiv">
+          <ion-col width-33>
+            <img class="img-thumbnail bookImg" src="{{b.image}}" alt="book Image">
+          </ion-col>
+          <ion-col width-67 class="rightAlign">
+
+            <div class="bookTitle">Name: {{b.title}}<br></div><br>
+            <div class="bookAuthor">Author: {{b.authors}}<br></div><br>
+           <!--<rating [ngModel]="book.avgRating" readOnly="true" class="searchPageRating" ></rating>-->
+       <!--<span class="heart-button"><button ng-click=""><ion-icon name="heart-outline"></ion-icon></button></span>-->
+        <!--<div class="button-clicked" [style.background-color]="getStyle(b.isbn)">
+      <button class="heart-button" (click)="showStyle = !showStyle;"><ion-icon name="heart-outline"></ion-icon></button>
+       </div>-->
+       
+   
+          </ion-col>
+           </ion-row>
+        </ion-item>
+       
+      </ion-item-sliding>
+   
+</ion-list>
+
+  </ion-card>
+
+
+
+  <!--</ion-card>
+  <button (click)="getAllBooks()"> Show Books </button>
+  
+    <ion-card *ngFor='let b of book'>
+
+      Name : {{b.name }} Author: {{ b.mid }} Publisher: {{b.track }}
+
+    </ion-card>
+>-->
+</ion-content>

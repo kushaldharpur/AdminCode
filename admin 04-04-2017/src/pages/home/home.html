@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Kalinga Library</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="home-page">
+    <ion-img width="100%" height="200px" src="./assets/images/welcome.jpg"></ion-img>
+
+    <ion-row>
+        <ion-col>
+            <p class="divTitle" style="text-align: center;color:#bc2323;font-size:1.3em;"><b>My Books</b></p>
+        </ion-col>
+        <ion-col>
+            <div>
+                <p class="Circletext" style="text-align: center;color:#bc2323;font-size:1.3em;"><b>1/3</b></p>
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-card>
+        <ion-list>
+
+            <ion-item-sliding #item>
+
+                <ion-item>
+
+                    <ion-row class="bookDiv">
+                        <ion-col width-33>
+                            <img class="img-thumbnail bookImg" src="./assets/images/9.png" alt="book Image">
+                        </ion-col>
+                        <ion-col width-67 class="rightAlign">
+                            <!--<ion-row>-->
+                            <span class="bookTitle">Book title:</span><br>
+                            <span class="bookAuthor">Book Author:<br></span>
+
+                            <span class="bookRenewDetails">Due Date:</span> <span class="dueDate"></span><br>
+                            <!--</ion-row>-->
+
+                        </ion-col>
+                    </ion-row>
+
+                </ion-item>
+                <ion-item-options side="left">
+                    <button ion-button (click)="renew()">Renew Book</button>
+                    <!--<button ion-button color="danger" (click)="share(item)">Share</button>-->
+                </ion-item-options>
+
+                <ion-item-options side="right">
+                    <button ion-button (click)="Return()">Return Book</button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+    </ion-card>
+
+</ion-content>
